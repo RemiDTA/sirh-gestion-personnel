@@ -50,6 +50,7 @@ public class InsererCollaborateurController extends HttpServlet {
 			col.setPhoto("https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg");
 			collabService.sauvegarderCollaborateur(col);
 			resp.sendRedirect("/sgp/lister");
+			
 
 		}
 	}

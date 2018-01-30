@@ -14,6 +14,8 @@ public class Collaborateur {
 	private String photo;
 	private ZonedDateTime dateHeureCreation;
 	private Boolean actif;
+	private String intitulePoste;
+	private Departement departement;
 
 	public Collaborateur() {
 		// TODO Auto-generated constructor stub
@@ -97,6 +99,22 @@ public class Collaborateur {
 
 	public void setActif(Boolean actif) {
 		this.actif = actif;
+	}
+
+	public String getIntitulePoste() {
+		return intitulePoste;
+	}
+
+	public void setIntitulePoste(String intitulePoste) {
+		this.intitulePoste = intitulePoste;
+	}
+
+	public Departement getDepartement() {
+		return departement;
+	}
+
+	public void setDepartement(Departement departement) {
+		this.departement = departement;
 	}
 
 }
