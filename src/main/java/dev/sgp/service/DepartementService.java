@@ -9,16 +9,21 @@ import dev.sgp.entite.Departement;
 
 public class DepartementService {
 	
-	
-	Departement depCompta = new Departement(0,"Comptabilité");
-	Departement depRH = new Departement(1,"Ressources Humaines");
-	Departement depInfo = new Departement(2,"Informatique");
-	Departement depAdmin = new Departement(3,"Administratif");
-
-	
 	List<Departement>listeDepartement = new ArrayList<>();
 	
-	
+	public DepartementService(){
+		Departement depCompta = new Departement(0,"Comptabilité");
+		Departement depRH = new Departement(1,"Ressources Humaines");
+		Departement depInfo = new Departement(2,"Informatique");
+		Departement depAdmin = new Departement(3,"Administratif");
+
+		
+		listeDepartement.add(depCompta);
+		listeDepartement.add(depRH);
+		listeDepartement.add(depInfo);
+		listeDepartement.add(depAdmin);
+		
+	}
 
 	public List<Departement> listerDepartements() {
 		return listeDepartement;
@@ -26,5 +31,6 @@ public class DepartementService {
 
 	public void sauvegarderCollaborateur(Departement depart) {
 		listeDepartement.add(depart);
+		
 	}
 }

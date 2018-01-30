@@ -1,5 +1,7 @@
 <%@page import="java.util.List"%>
 <%@page import="dev.sgp.entite.Collaborateur"%>
+<%@page import="dev.sgp.entite.Departement"%>
+<%@page import="dev.sgp.service.DepartementService "%>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,11 +96,22 @@
 				<label class="mr-sm-2" for="inlineFormCustomSelect">Filtrer
 					par departement</label>
 			</div>
+
+	
+	
+
 			<div class="form-group col-3">
 				<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-					<option value="1">Ressource humaine</option>
-					<option value="2" selected>Informatique</option>
-					<option value="3">Comptabilité</option>
+							<%
+			DepartementService dptServ = new DepartementService();
+			List<Departement> listDpt = dptServ.listerDepartements();
+			for (Departement dpt : dptServ.listerDepartements()) {
+	%>
+					
+					<option value=<%=dpt.getId()%>><%=dpt.getNom()%></option>
+					<%
+		}
+	%>
 				</select>
 			</div>
 		</div>
