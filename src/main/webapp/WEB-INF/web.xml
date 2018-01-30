@@ -9,17 +9,26 @@
 		<servlet-name>EditerCollabo</servlet-name>
 		<servlet-class>dev.sgp.web.EditerCollaborateurController</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>InsererCollabo</servlet-name>
+		<servlet-class>dev.sgp.web.InsererCollaborateurController</servlet-class>
+	</servlet>
 
 	
 	
 	<servlet-mapping>
 		<servlet-name>ListerCollaborateursController</servlet-name>
-		<url-pattern>/collaborateurs/lister</url-pattern>
+		<url-pattern>/lister</url-pattern>
 	</servlet-mapping>
 	
 	<servlet-mapping>
 		<servlet-name>EditerCollabo</servlet-name>
-		<url-pattern>/collaborateurs/editer</url-pattern>
+		<url-pattern>/editer</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>InsererCollabo</servlet-name>
+		<url-pattern>/inserer</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

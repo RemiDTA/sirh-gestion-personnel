@@ -1,8 +1,12 @@
 <%@page import="java.util.List"%>
+<%@page import="dev.sgp.entite.Collaborateur"%>
 <%@ page language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/css/bootstrap.min.css">
+
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -34,7 +38,7 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link" href="#">Collaborateurs
+				<li class="nav-item active"><a class="nav-link" href="<%=request.getContextPath()%>/lister">Collaborateurs
 						<span class="sr-only">cc</span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Statistiques</a>
@@ -46,10 +50,12 @@
 	</nav>
 	<br />
 	<%
-		List<String> listeNoms = (List<String>) request.getAttribute("listeNoms");
-		for (String nom : listeNoms) {
+		List<Collaborateur> listeNoms = (List<Collaborateur>) request.getAttribute("listeNoms");
+		for (Collaborateur col : listeNoms) {
 	%>
-	<li><%=nom%></li>
+	<li><%=col.getPrenom() %></li>
+	<li><%=col.getEmailPro()%></li><br />
+	
 	<%
 		}
 	%>
@@ -58,7 +64,7 @@
 		<div class="col align-self-start"></div>
 		<div class="col align-self-center"></div>
 		<div class="col align-self-end">
-			<a href="ajoutCollaborateur.jsp">
+			<a href="<%=request.getContextPath()%>/views/collab/ajoutCollaborateur.jsp">
 				<button type="button" class="btn btn-light">Ajouter un
 					nouveau collaborateur</button>
 			</a>
