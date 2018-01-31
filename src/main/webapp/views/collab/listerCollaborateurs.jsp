@@ -51,16 +51,7 @@
 		</div>
 	</nav>
 	<br />
-	<%
-		List<Collaborateur> listeNoms = (List<Collaborateur>) request.getAttribute("listeNoms");
-		for (Collaborateur col : listeNoms) {
-	%>
-	<li><%=col.getPrenom() %></li>
-	<li><%=col.getEmailPro()%></li><br />
 	
-	<%
-		}
-	%>
 
 	<div class="row">
 		<div class="col align-self-start"></div>
@@ -120,190 +111,35 @@
 	</div>
 
 
+	
+	
 	<div class="card-columns">
+	
+	<%
+		List<Collaborateur> listeNoms = (List<Collaborateur>) request.getAttribute("listeNoms");
+		for (Collaborateur col : listeNoms) {
+	%>
+	
 		<div class="card">
 			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
+				src=<%=col.getPhoto() %>
 				alt="Card image cap">
 			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
+				<h5 class="card-title"><%=col.getPrenom()%> <%=col.getNom()%></h5>
 				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
 				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
+					Département : 60<br /> 
+					Email : <%=col.getEmailPro() %><br />
+					Telephone :0601020304
 				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
+				<a href="#?<%=col.getMatricule() %>" class="btn btn-primary">Editer</a>
 
 			</div>
 		</div>
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
-
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
-
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
-
-		<div class="card">
-			<img class="card-img-top"
-				src="https://cdnfr1.img.sputniknews.com/images/102884/15/1028841504.jpg"
-				alt="Card image cap">
-			<div class="card-body">
-				<h5 class="card-title">Nom Prenom</h5>
-				<h6 class="card-subtitle mb-2 text-muted">fonction</h6>
-				<p class="card-text">
-					Département : 60<br /> Email : salut@coucou.fr <br /> Telephone :
-					0601020304
-				</p>
-				<a href="#" class="btn btn-primary">Editer</a>
-
-			</div>
-		</div>
+		<%
+		}
+	%>
+		
 	</div>
 
 
